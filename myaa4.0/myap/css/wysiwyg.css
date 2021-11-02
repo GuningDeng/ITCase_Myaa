@@ -1,0 +1,223 @@
+.editSwitch {
+    position: fixed;
+    top: 25%;
+    right: -20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    /* background: rgba(0, 0, 0, .55); */
+    background: #fff;
+    color: #fff;
+    /* border: 2px solid #ccc; */
+    border-radius: 10px 0 0 10px;
+    box-shadow: -3px 5px 11px #999;
+}
+
+.switchShowEidtor {
+    width: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.switchShowEidtorIcn {
+    width: 42px;
+    height: 42px;
+    margin-bottom: 9px;
+    padding-left: 7px;
+    padding-top: 5px;
+    /* font-size: 26px; */
+    /* color: #999; */
+    border-bottom: 1px solid #ccc;
+}
+
+#checkboxShowEidtor {
+    display: none;
+}
+
+.checkboxSE {
+    width: 32px;
+    height: 32px;
+    margin: 0 5px;
+    vertical-align: middle;
+    background-color: #fff;
+    border: 1px solid #777;
+    border-radius: 7px;
+    transition: background-color .3s;
+}
+
+.checkbox-input:checked+.checkboxSE {
+    background-color: #57ad68;
+}
+
+.checkbox-input:checked+.checkboxSE::after {
+    content: "\2714";
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 1.3;
+    font-size: 26px;
+    box-shadow: 0 0 7px #57ad68;
+}
+
+/* editor toolbox */
+.editorToolBox {
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
+    margin-top: 15px;
+    padding: 7px;
+    border-top: 1px solid rgba(0, 0, 0, .15);
+}
+
+.editorTool {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.editorSelect {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    position: relative;
+    width: 33px;
+    height: 33px;
+    margin-bottom: 15px;
+    padding: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    color: #555;
+    border: 1px solid #e1e1e1;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.editorBtnIcon {
+    min-width: 33px;
+    height: 33px;
+    margin-bottom: 15px;
+    padding: 5px;
+    background: #fff;
+    font-family: 'Lato', sans-serif;
+    font-weight: bold;
+    color: #555;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+}
+
+.editorSelect:hover,
+.editorSelect:focus,
+.editorBtnIcon:hover,
+.editorBtnIcon:focus {
+    background: #ccc;
+}
+
+.editorBtnIcon >span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* onoffswitch */
+.switchEditable {
+    position: relative;
+    margin: 15px 0;
+}
+
+.switchEditable-checkbox {
+    display: none;
+}
+
+.switchEditable-label {
+    position: relative;
+    right: 0;
+    display: block;
+    width: 70px;
+    height: 30px;
+    border: 1px solid #999;
+    border-radius: 20px;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.switchEditable-inner {
+    position: absolute;
+    display: block;
+    width: 230%;
+    margin-left: -125%;
+    transition: margin .3s ease-in 0s;
+    padding: 5px;
+}
+
+.switchEditable-inner::before {
+    content: attr(data-off);
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: block;
+    width: 50%;
+    height: 30px;
+    padding-right: 10px;
+    background-color: #eee;
+    text-align: right;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 2;
+    color: #999;
+}
+
+.switchEditable-inner::after {
+    content: attr(data-on);
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    width: 50%;
+    height: 30px;
+    padding-left: 10px;
+    background-color: #00e500;
+    font-size: 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 2;
+    color: #fff;
+}
+
+.switchEditable-switch {
+    position: absolute;
+    top: 0;
+    right: 42px;
+    bottom: 0;
+    display: block;
+    width: 27px;
+    height: 27px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 7px rgba(0, 0, 0, .55);
+    transition: all .3s ease-in 0s;
+}
+
+.switchEditable-checkbox:checked+.switchEditable-label .switchEditable-inner {
+    margin-left: 0;
+}
+
+.switchEditable-checkbox:checked+.switchEditable-label .switchEditable-switch {
+    right: 0;
+}
+
+.tipInfo {
+    font-size: 16px;
+}
